@@ -67,11 +67,52 @@ let posicionBS = juegos.indexOf("Brawl Stars");
 
 //console.log(posicionBS); // CaseSensitive
 
+/*-----------------array methods---------------- */
+/*-----------------array methods---------------- */
+/*-----------------array methods---------------- */ 
+
+const personajes = ['Naruto', 'Kakashi', 'Iruka', 'Sasuke', 'Tsunade', 'Orochimaru', 'Jiraiya'];
+
+//  .includes --> revisa si un valor existe en un arreglo (solo en arreglos que solo tengan indices)
+// este metodo retorna un valor asi que hay que crear una variable
+let resultado = personajes.includes('Kakashi');
+console.log(resultado);
+
+let resultadoDos = personajes.includes('Sakura');
+console.log(resultadoDos);
+ 
+// .some --> revisa si hay un valor en un arreglo de objetos
+
+const carrito = [
+    {nombre: 'PS5', precio: 700},
+    {nombre: 'XBOX S', precio: 690},
+    {nombre: 'PS4', precio: 400},
+    {nombre: 'XBOX ONE', precio: 350}
+]
+ 
+//recordar que los arrowF al recibir un solo parametro se pueden eliminar los parentesis 
+// "(parametro)=>" queda "parametro =>"  ---  Al ser una sola linea de codigo puedo eliminar las llaves tmb
+// no hace falta el "return" porque los arrowF lo dan por explicito
+const stock = carrito.some( producto => producto.nombre === 'PS5');
+console.log(stock);
+
+//tambien puedo usar los arrowF en arreglos tradicionales, que sean solo de indices
+const tsunade = personajes.some(personaje => personaje === 'Tsunade');
+console.log(tsunade);
+
+const kiba = personajes.some(personaje => personaje === 'Kiba');
+console.log(kiba);
 
 
+// findIndex --> busca el indice de un valor
+
+const sasuke = personajes.findIndex(personaje => personaje === 'Sasuke');
+console.log(sasuke); // me va a mostrar 3 porque sasuke esta en la posicion 3, es el 4to elemento.
+//recordemos que la primera posicion es la posicion 0 --- 'Naruto'= 0, 'Kakashi'= 1, 'Iruka'= 2, 'Sasuke'= 3 
 
 
-
+const ps4 = carrito.findIndex(producto => producto.nombre === 'PS4');
+console.log(ps4);
 
 
 
