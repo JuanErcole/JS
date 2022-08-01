@@ -104,7 +104,7 @@ const kiba = personajes.some(personaje => personaje === 'Kiba');
 console.log(kiba);
 
 
-// findIndex --> busca el indice de un valor
+// findIndex --> busca el indice de un valor -- funciona tambien en arreglos de objetos.
 
 const sasuke = personajes.findIndex(personaje => personaje === 'Sasuke');
 console.log(sasuke); // me va a mostrar 3 porque sasuke esta en la posicion 3, es el 4to elemento.
@@ -113,6 +113,87 @@ console.log(sasuke); // me va a mostrar 3 porque sasuke esta en la posicion 3, e
 
 const ps4 = carrito.findIndex(producto => producto.nombre === 'PS4');
 console.log(ps4);
+
+
+// .reduce  -.-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-
+
+
+
+//con un foreach
+const carritoDeCompras = [
+    {nombre: 'Mayonesa hellmans', precio: 700},
+    {nombre: 'BBQ hellmans', precio: 690},
+    {nombre: 'Cerveza Corona', precio: 400},
+    {nombre: 'Philip Morris', precio: 350}
+]
+
+/* let total = 0;
+
+carritoDeCompras.forEach(productos => total += productos.precio);
+console.log(total); */
+
+//con un .reduce
+
+let TotalPagar = carritoDeCompras.reduce((total, producto)=> total + producto.precio, 0);
+console.log(TotalPagar);
+
+
+// .filter -.-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+// Una caracteristica de filter es que te crea un arreglo nuevo con la condicion que estes revisando 
+
+const carritoDeCompra = [
+    {nombre: 'Mayonesa hellmans', precio: 700},
+    {nombre: 'BBQ hellmans', precio: 700},
+    {nombre: 'Cerveza Corona', precio: 400},
+    {nombre: 'Alfajor', precio: 130},
+    {nombre: 'Pepsi', precio: 230},
+    {nombre: 'Philip Morris', precio: 350}
+]
+
+let resultado1;
+
+
+resultado1 = carritoDeCompra.filter(producto => producto.precio < 500);
+resultado1 = carritoDeCompra.filter(producto => producto.precio > 500);
+resultado1 = carritoDeCompra.filter(producto => producto.nombre  === 'Pepsi');
+resultado1 = carritoDeCompra.filter(producto => producto.nombre !== 'Pepsi');
+console.log(resultado1);
+
+
+// .find -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+//El .find te crea un nuevo arreglo basado en la condicion que estas revisando
+// Siempre retorna el primero que encuenta 
+
+const product = carritoDeCompra.find( producto => producto.nombre === 'Cerveza Corona');
+const product2 = carritoDeCompra.find( producto => producto.precio === 700);
+console.log(product);
+console.log(product2);
+
+/* ------------------ every ------------------------ */
+
+//todos los elemnetos de un arreglo deben cumplir esa condicion para que nos devuelva un true
+
+const preciosBajos = carritoDeCompra.every( productos => productos.precio < 800);
+const preciosAltos = carritoDeCompra.every( productos => productos.precio > 800);
+console.log(preciosAltos);
+
+/* .concat ------------------------------------------------ */
+
+const dias = ['lunes', 'martes', 'miercoles'];
+const diasDos = ['jueves', 'viernes'];
+const diasTres= ['sabado', 'domingo'];
+
+const semana = dias.concat(diasTres, diasDos); //Es impoortabte el orden en la declaracion
+console.log(semana);
+
+//Otra forma de hacerlo es con el spread operator
+//Tambien importa el orden
+
+// ...dias crea una copia de dia en el nuevo arreglo
+const resultado2 = [...dias, ...diasDos, ...diasTres];
+console.log(resultado2)  
 
 
 
