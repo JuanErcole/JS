@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo{
+    font-size: 5rem;
+    color: blue;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.clase-de-prueba{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.otraClase{
+    width: 100px;
+}

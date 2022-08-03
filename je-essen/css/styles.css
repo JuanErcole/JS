@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+header .header__animacion-1 {
+  animation-name: animacionHeader-1;
+  animation-duration: 1s; }
+
+@keyframes animacionHeader-1 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(100%); } }
+
+header .header__animacion-2 {
+  animation-name: animacionHeader-2;
+  animation-duration: 2s; }
+
+@keyframes animacionHeader-2 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(100%); } }
+
+header .container .nav .nav-item .mundial {
+  color: aqua; }
+
+header .container .nav .nav-item .mundial:hover {
+  color: #ff0088; }
+
+header .container .nav .nav-item .links {
+  color: white; }
+
+header .container .nav .nav-item .links:hover {
+  color: aqua;
+  transition: 0.4s; }
+
+main .container .row .titulo {
+  animation-name: titulos;
+  animation-duration: 3s; }
+
+@keyframes titulos {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+footer .redesFooter {
+  width: 60%;
+  background-color: white; }
+  footer .redesFooter .redes {
+    font-size: 3rem;
+    color: black; }
+  footer .redesFooter .footerIG:hover {
+    color: #b306b3;
+    transition: 0.5s; }
+  footer .redesFooter .footerFB:hover {
+    color: blue;
+    transition: 0.5s; }
+  footer .redesFooter .footerWS:hover {
+    color: green;
+    transition: 0.5s; }
+
+footer .container .nav .nav-item .links {
+  color: white; }
+
+footer .container .nav .nav-item .links:hover {
+  color: aqua;
+  transition: 0.4s; }
+
+main .container .row .container .redesIG {
+  background: linear-gradient(rgba(0, 0, 255, 0.816), rgba(245, 50, 154, 0.855), rgba(255, 0, 0, 0.838), rgba(255, 166, 0, 0.844));
+  margin-top: 0.5rem;
+  padding: 0.5rem; }
+
+main .container .row .container .redesFB {
+  background-color: blue;
+  margin: 0.5rem 0;
+  padding: 0.5rem; }
+
+main .container .row .container .redesWS {
+  background-color: lime;
+  padding: 00.5rem;
+  margin-bottom: 0.5rem; }
+
+main .container .row .container .redes {
+  color: black;
+  font-size: 1.8rem; }
+
+main .container .row .home__seleccion {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: linear-gradient(to left, rgba(255, 52, 208, 0.781), pink, rgba(0, 255, 255, 0.753));
+  border-radius: 2rem;
+  text-align: center; }
+  main .container .row .home__seleccion a {
+    text-decoration: none;
+    color: black; }
+  main .container .row .home__seleccion a:hover {
+    color: red; }
+
+main .container .row .recetasContacto {
+  background: linear-gradient(to left, rgba(255, 52, 208, 0.781), pink, rgba(0, 255, 255, 0.753)); }
+
+main .container .row .col div p .btnGaleria {
+  background: linear-gradient(to left, rgba(255, 52, 208, 0.781), pink, rgba(0, 255, 255, 0.753)); }
+
+main .container .row .animacionesGaleria {
+  height: 3rem;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 1rem 0;
+  font-family: 'roboto'; }
+
+main .container .row .animacionUno {
+  animation-name: traslado;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; }
+
+main .container .row .animacionDos {
+  animation-name: trasladoDos;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; }
+
+main .container .row .pieAnimacion {
+  background: linear-gradient(to left, rgba(255, 52, 208, 0.781), pink, rgba(0, 255, 255, 0.753)); }
+
+@keyframes traslado {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes trasladoDos {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
+main .container .recetasContacto {
+  background: linear-gradient(to left, rgba(255, 52, 208, 0.781), pink, rgba(0, 255, 255, 0.753)); }
+
+/*Aprovecho esta pagina para agregar mas css puro, flexbox y grid*/
+/*-.-.-.-.- mapa -.-.-.-*/
+/*creo mixin para el contenedor heroContainer, pero sin necesidad de agregar valores*/
+main .container {
+  /*contenedor de tarjetas de messi y copa del mundo*/
+  /*uso media, ya que las del desafio fueron las del otro proyecto*/ }
+  main .container .heroContainer {
+    /*imagen proncipal con background, usando map-get*/
+    margin-bottom: 1.5rem;
+    height: 62rem;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../assets/bg-mundial2.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 65%; }
+    main .container .heroContainer .heroContainer__textos {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      /* flex-direction: column;
+                justify-content: space-between;
+                align-items: center; */
+      color: white; }
+      main .container .heroContainer .heroContainer__textos h1 {
+        font-size: 3rem;
+        font-family: "Dosis"; }
+      main .container .heroContainer .heroContainer__textos p {
+        font-size: 2rem;
+        font-family: "Dosis"; }
+  main .container .cardContainer {
+    background-color: black;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*Utilizando extend*/ }
+    main .container .cardContainer .messi_card, main .container .cardContainer .copa_card {
+      margin: 1rem auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      font-family: "Dosis";
+      font-size: 1.2rem;
+      font-weight: 700; }
+      main .container .cardContainer .messi_card .messi_img img, main .container .cardContainer .copa_card .messi_img img {
+        width: 100%;
+        height: 100%; }
+    main .container .cardContainer .copa_card {
+      /* background: white;
+                margin: 1rem auto;
+                padding: 1.5rem;
+                border-radius: 10px;
+                font-family: map-get($estilos, fuente );
+                font-size: 1.2rem;
+                font-weight: 700; */
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-areas: "img"  "parrafo";
+      justify-items: center; }
+      main .container .cardContainer .copa_card .copa_img {
+        grid-area: img; }
+        main .container .cardContainer .copa_card .copa_img img {
+          width: 100%;
+          height: 100%; }
+      main .container .cardContainer .copa_card p {
+        grid-area: parrafo; }
+  @media (min-width: 768px) {
+    main .container .cardContainer .messi_card, main .container .cardContainer .copa_card {
+      margin: auto;
+      width: 45%; }
+    main .container .cardContainer .copa_card {
+      width: 45%;
+      margin: auto;
+      grid-template-areas: "img ."  "img parrafo" "img ."; } }
